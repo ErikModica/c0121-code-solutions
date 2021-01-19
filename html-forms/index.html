@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML Forms</title>
+  </head>
+  <body>
+
+    <div>
+      <form action="index.html" method="get">
+      <div>
+        <label for="email">Email</label>
+      </div>
+      <div>
+        <input id="email" type="text" name="email" maxlength="30">
+      </div>
+      </form>
+    </div>
+
+    <div>
+      <form action="index.html" method="get">
+      <div>
+        <label for="why-is-coding-cool">Why is coding cool?</label>
+      </div>
+      <div>
+        <select id="why-is-coding-cool" name="reason">
+          <option value="select an option">Select an option</option>
+          <option value="interesting">Because it's interesting</option>
+          <option value="fun">Because it's fun</option>
+          <option value="powerful">Because it's powerful</option>
+        </select>
+      </div>
+      </form>
+    </div>
+
+    <div>
+      <form action="index.html" method="get">
+      <div>
+        <label for="favorite-language">Favorite Langauge (choose one)</label>
+      </div>
+      <div>
+        <input class="favorite-language" type="radio" name="language" value="html"><span>HTML</span>
+        <input class="favorite-language" type="radio" name="language" value="css"><span>CSS</span>
+        <input class="favorite-language" type="radio" name="language" value="javascript"><span>JavaScript</span>
+      </div>
+      </form>
+    </div>
+
+    <div>
+      <form action="index.html" method="get">
+      <div>
+        <label for="sign-up">Would you like to sign up for more information?</label>
+      </div>
+      <div>
+        <input id="sign-up" type="checkbox" name="sign up" value="yes"><span>Sign me up!</span>
+      </div>
+      </form>
+    </div>
+
+    <div>
+      <form action="index.html" method="get">
+      <div>
+        <label for="comments">Comments</label>
+      </div>
+      <div>
+        <textarea id="comments" name="comments" cols="25" rows="8"></textarea>
+      </div>
+      </form>
+    </div>
+
+    <div>
+      <form action="index.html" method="get">
+      <input type="submit" name="submit" value="submit">
+      </form>
+    </div>
+
+  </body>
+</html>
