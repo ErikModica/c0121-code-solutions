@@ -1,0 +1,15 @@
+body {
+    line-height: 1.5rem;
+}
+
+h1 h2 {
+  font-style: 'Playfair Display';
+}
+
+h2 {
+  font-style: oblique;
+}
+
+p {
+  font-family: 'Quicksand';
+}
