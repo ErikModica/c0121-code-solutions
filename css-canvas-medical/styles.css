@@ -1,0 +1,196 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Tiempos Headline', serif;
+  font-style: normal;
+  font-weight: normal;
+  src: url('TiemposHeadline-Regular.woff2') format('woff2');
+  color: rgb(128, 128, 128);
+}
+
+p,
+a {
+  font-family: 'Avenir', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  src: url('avenir.woff2') format('woff2');
+  color: rgb(131, 131, 131);
+}
+
+.container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.row {
+  display: flex;
+  padding: 1.2rem 1rem;
+}
+
+.one-fifth-column {
+  display: flex;
+  flex-basis: 20%;
+}
+
+.four-fifth-column {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-basis: 80%;
+}
+
+.four-fifth-column a {
+  padding: 0 1.5rem;
+}
+
+.blue-logo {
+  width: 9rem;
+  height: 2.6rem;
+}
+
+.contact-us-button {
+  background-color: rgb(41, 68, 100);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 3px;
+  border-style: unset;
+  font-family: 'Avenir', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  src: url('avenir.woff2') format('woff2');
+  font-size: 16px;
+}
+
+.row2 {
+  padding: 3rem 0;
+}
+
+.full-column2 {
+  position: relative;
+  display: flex;
+  padding: 15px;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.hero {
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+.text-content {
+  position: absolute;
+  width: 44%;
+  left: 5rem;
+  top: 3.3rem;
+}
+
+.text-content > h2 {
+  color: white;
+  font-size: 32px;
+}
+
+.text-content > p {
+  color: white;
+  padding-bottom: 0.5rem;
+  font-size: 14px;
+  line-height: 1.4rem;
+}
+
+.row3 {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  background-color: rgb(250, 250, 250);
+  padding: 2.5rem 1rem 3rem 1rem;
+}
+
+.full-column3 {
+  flex-basis: 100%;
+  padding: 0 17rem;
+}
+
+.half-column {
+  flex-basis: 50%;
+  padding: 1rem 0;
+}
+
+.row5 {
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+}
+
+.half-column2 > h2 {
+  font-size: 1.4rem;
+}
+
+.half-column2 > p {
+  font-size: 0.8rem;
+}
+
+.get-started-button {
+  background-color: rgb(41, 68, 100);
+  color: white;
+  padding: 10px 30px;
+  border-radius: 3px;
+  border-style: unset;
+  font-family: 'Avenir', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  src: url('avenir.woff2') format('woff2');
+  font-size: 16px;
+}
+
+.row6 {
+  display: flex;
+  background-color: rgb(82, 83, 81);
+  padding: 4rem 5rem;
+}
+
+.white-logo {
+  width: 7.2rem;
+  height: 1.4rem;
+}
+
+.half-column3 {
+  flex-basis: 50%;
+  padding-top: 1.1rem;
+}
+
+.text-content-half-column3 {
+  margin-top: 2rem;
+}
+
+.text-content-half-column3 > p {
+  color: rgb(250, 250, 250);
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.quarter-column {
+  flex-basis: 25%;
+}
+
+.quarter-column > p {
+  color: rgb(250, 250, 250);
+}
+
+.row7 {
+  display: flex;
+  background-color: rgb(250, 250, 250);
+  padding: 3rem 4rem;
+}
+
+.full-column4 > a {
+  padding-right: 2rem;
+}
