@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+button {
+  width: 140px;
+  height: 40px;
+  border: grey;
+  border-width: 2px;
+  border-style: ridge;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  border-top-color: white;
+  border-left-color: white;
+  cursor: pointer;
+}
+
+thead {
+  background-color: black;
+  color: white;
+}
+
+tbody > tr {
+  background-color: white;
+}
+
+tbody > tr:nth-child(odd) {
+  background-color: lightgray;
+}
