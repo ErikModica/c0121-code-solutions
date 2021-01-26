@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Barlow', sans-serif;
+}
+
+.container {
+  padding: 0 2rem;
+}
+
+.row1 {
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+.row2 {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 0 3rem;
+}
+
+.one-fourth-column {
+  flex-basis: 23%;
+  align-items: center;
+  text-align: center;
+}
+
+.phone-img {
+  width: 100%;
+}
+
+.icon-img {
+  width: 25%;
+}
+
+h3 {
+  font-size: 14px;
+  padding-bottom: 0.5rem;
+}
+
+p {
+  font-size: 10px;
+}
