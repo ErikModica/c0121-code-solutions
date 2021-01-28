@@ -7,16 +7,20 @@
   padding: 0 2rem;
 }
 
-.row1 {
+.row-header {
   display: flex;
-  justify-content: center;
+}
+
+.full-column-header {
+  flex-basis: 100%;
+  text-align: center;
 }
 
 h2 {
   font-size: 20px;
 }
 
-.row2 {
+.row-data {
   display: flex;
   width: 100%;
   justify-content: space-around;
@@ -24,13 +28,13 @@ h2 {
 }
 
 .one-fourth-column {
-  flex-basis: 23%;
+  flex-basis: 25%;
   align-items: center;
   text-align: center;
 }
 
 .phone-img {
-  width: 100%;
+  width: 90%;
 }
 
 .icon-img {
