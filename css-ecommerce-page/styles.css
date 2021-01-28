@@ -8,16 +8,12 @@
   padding: 0 10rem;
 }
 
-.row1 {
-  display: flex;
-}
-
 .full-column {
-  flex-basis: 100%;
+  width: 100%;
   text-align: center;
 }
 
-.row2 {
+.row-items {
   display: flex;
   justify-content: center;
   align-items: flex-end;
