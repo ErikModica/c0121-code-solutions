@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+}
+
+.container {
+  padding: 0 10rem;
+}
+
+.full-column {
+  width: 100%;
+  text-align: center;
+}
+
+.row-items {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.quarter-column {
+  flex-basis: 20%;
+  padding: 0.5rem 1rem;
+}
+
+.merch-img {
+  width: 100%;
+}
+
+.price {
+  background-color: blanchedalmond;
+}
+
+.grey,
+del {
+  color: rgb(201, 201, 201);
+}
