@@ -7,16 +7,14 @@ h6 {
   font-family: 'Tiempos Headline', serif;
   font-style: normal;
   font-weight: normal;
-  src: url('TiemposHeadline-Regular.woff2') format('woff2');
   color: rgb(99, 99, 99);
 }
 
-p,
-a {
+body,
+button {
   font-family: 'Avenir', sans-serif;
   font-style: normal;
   font-weight: 500;
-  src: url('avenir.woff2') format('woff2');
   color: rgb(131, 131, 131);
 }
 
@@ -25,24 +23,24 @@ a {
   padding-right: 2rem;
 }
 
-.row {
+.row-navbar {
   display: flex;
   padding: 1.2rem 1rem;
 }
 
-.one-fifth-column {
+.one-fifth-column-navbar {
   display: flex;
   flex-basis: 20%;
 }
 
-.four-fifth-column {
+.four-fifth-column-navbar {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-basis: 80%;
 }
 
-.four-fifth-column a {
+.four-fifth-column-navbar a {
   padding: 0 1.5rem;
 }
 
@@ -57,18 +55,14 @@ a {
   padding: 8px 20px;
   border-radius: 3px;
   border-style: unset;
-  font-family: 'Avenir', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  src: url('avenir.woff2') format('woff2');
   font-size: 16px;
 }
 
-.row2 {
+.row-hero {
   padding: 3rem 0;
 }
 
-.full-column2 {
+.full-column-hero {
   position: relative;
   display: flex;
   padding: 15px;
@@ -85,26 +79,26 @@ a {
   z-index: -1;
 }
 
-.text-content {
+.text-content-hero {
   position: absolute;
   width: 44%;
   left: 10%;
   top: 3.3rem;
 }
 
-.text-content > h2 {
+.text-content-hero > h2 {
   color: white;
   font-size: 32px;
 }
 
-.text-content > p {
+.text-content-hero > p {
   color: white;
   padding-bottom: 0.5rem;
   font-size: 14px;
   line-height: 1.4rem;
 }
 
-.row3 {
+.row-clinicians {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
@@ -112,17 +106,17 @@ a {
   padding: 2.5rem 1rem 3rem 1rem;
 }
 
-.full-column3 {
+.full-column-clinicians {
   flex-basis: 100%;
   padding: 0 17rem;
 }
 
-.half-column {
+.half-column-clinicians {
   flex-basis: 50%;
   padding: 1rem 0;
 }
 
-.row5 {
+.row-learn-more {
   display: flex;
   background-color: white;
   align-items: center;
@@ -130,11 +124,11 @@ a {
   padding: 1rem 3rem;
 }
 
-.half-column2 > h2 {
+.half-column-learn-more > h2 {
   font-size: 1.4rem;
 }
 
-.half-column2 > p {
+.half-column-learn-more > p {
   font-size: 0.8rem;
 }
 
@@ -144,14 +138,10 @@ a {
   padding: 10px 30px;
   border-radius: 3px;
   border-style: unset;
-  font-family: 'Avenir', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  src: url('avenir.woff2') format('woff2');
   font-size: 16px;
 }
 
-.row6 {
+.row-footer {
   display: flex;
   background-color: rgb(82, 83, 81);
   padding: 4rem 5rem;
@@ -162,37 +152,37 @@ a {
   height: 1.4rem;
 }
 
-.half-column3 {
+.half-column-footer {
   flex-basis: 50%;
   padding-top: 1.1rem;
 }
 
-.text-content-half-column3 {
+.text-content-footer {
   margin-top: 2rem;
 }
 
-.text-content-half-column3 > p {
+.text-content-footer > p {
   color: rgb(250, 250, 250);
   font-size: 0.8rem;
   margin-top: 0.3rem;
   margin-bottom: 0.3rem;
 }
 
-.quarter-column {
+.quarter-column-footer {
   flex-basis: 25%;
 }
 
-.quarter-column > p {
+.quarter-column-footer > p {
   color: rgb(250, 250, 250);
 }
 
-.row7 {
+.row-extra {
   display: flex;
   background-color: rgb(250, 250, 250);
   padding: 3rem 4rem;
 }
 
-.full-column4 > a {
+.full-column-extra > a {
   padding-right: 2rem;
 }
 
@@ -243,7 +233,6 @@ a {
   font-family: 'Tiempos Headline', sans-serif;
   font-style: italic;
   font-weight: 300;
-  src: url('TiemposHeadline-LightItalic.woff2') format('woff2');
   font-size: 14px;
 }
 
@@ -278,13 +267,6 @@ a {
 .implement-full-column h2 {
   text-align: center;
   padding-bottom: 3rem;
-}
-
-.implement-full-column li {
-  font-family: 'Avenir', serif;
-  font-style: normal;
-  font-weight: 500;
-  src: url('avenir.woff2') format('woff2');
 }
 
 .implement-full-column p {
