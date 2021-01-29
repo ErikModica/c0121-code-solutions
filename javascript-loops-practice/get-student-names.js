@@ -3,9 +3,7 @@
 function getStudentNames(students) {
   var studentNames = [];
   for (var i = 0; i < students.length; i++) {
-    for (var key in students[i]) {
-      studentNames.push(students[i][key]);
-    }
+    studentNames.push(students[i].name);
   }
   return studentNames;
 }
