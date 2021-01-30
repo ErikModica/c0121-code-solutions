@@ -2,7 +2,7 @@
 
 function isUpperCased(word) {
   for (var i = 0; i < word.length; i++) {
-    if (word[i] === word[i].toLowerCase()) {
+    if (word[i] !== word[i].toUpperCase()) {
       return false;
     }
   }
