@@ -1,0 +1,33 @@
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
+}
+
+.bulb {
+  background-color: burlywood;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+}
+
+.bulb-light {
+  background-color: rgb(250, 234, 132);
+  border-style: solid;
+  border-color: rgb(250, 234, 132);
+  box-shadow: 0 0 40px rgb(250, 234, 132);
+}
+
+.background-light {
+  background-color: rgb(254, 249, 241);
+}
+
+.bulb-dark {
+  background-color: rgb(37, 37, 37);
+}
+
+.background-dark {
+  background-color: rgb(17, 17, 17);
+}
