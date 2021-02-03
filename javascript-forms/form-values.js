@@ -5,11 +5,11 @@ $contactForm.addEventListener('submit', function (event) {
 
   var contactInfo = {};
 
-  contactInfo[$contactForm[0].name] = $contactForm[0].value;
+  contactInfo[$contactForm.elements.name.name] = $contactForm.elements.name.value;
 
-  contactInfo[$contactForm[1].name] = $contactForm[1].value;
+  contactInfo[$contactForm.elements.email.name] = $contactForm.elements.email.value;
 
-  contactInfo[$contactForm[2].name] = $contactForm[2].value;
+  contactInfo[$contactForm.elements.message.name] = $contactForm.elements.message.value;
 
   $contactForm.reset();
 
