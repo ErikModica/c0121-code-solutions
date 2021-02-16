@@ -6,24 +6,19 @@ $spanText[0].className = 'current-letter';
 
 $typedLetter.addEventListener('keydown', function (event) {
 
-  // console.log(event.key)
-  // console.log($spanText[i].textContent)
-  // console.log(i);
-  // console.log(event.code);
-  // console.log($spanText[i].className)
+  if ($spanText[i].className === 'space current-letter' && event.code === 'Space') {
+    $spanText[i].className = 'space';
+    i++;
+  }
 
   if (event.key === $spanText[i].textContent) {
     $spanText[i].className = ' right-letter';
-    if (event.code === 'Space') {
-      $spanText[i].className += ' space';
-    }
     i++;
-  } else { $spanText[i].className = 'wrong-letter'; }
-
-  if ($spanText[i].textContent === ' ') {
-    $spanText[i].className += ' space';
+  } else if ($spanText[i].className !== 'space current-letter') {
+    $spanText[i].className = 'wrong-letter';
   }
 
-  $spanText[i].className += ' current-letter';
-
+  if ($spanText[i].className !== 'space current-letter') {
+    $spanText[i].className += ' current-letter';
+  }
 });

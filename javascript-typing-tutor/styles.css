@@ -5,32 +5,17 @@
   font-weight: bold;
 }
 
-body {
-  background-color: rosybrown;
-}
-
 span {
   margin: -10px;
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 98vh;
-  flex-basis: 100%;
-}
-
-.space {
-  margin-right: 35px;
+  padding: 50vh;
+  text-align: center;
 }
 
 .right-letter {
   color: greenyellow;
-}
-
-.wrong-letter {
-  color: red;
 }
 
 .current-letter {
@@ -39,4 +24,9 @@ span {
   border-top: 0;
   border-right: 0;
   border-left: 0;
+}
+
+.wrong-letter {
+  color: red;
+  border-color: red;
 }
