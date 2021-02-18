@@ -12,7 +12,7 @@ var intervalID = setInterval(cyclePokemon, 3000);
 
 function cyclePokemon() {
   i++;
-  if (i === 5) {
+  if (i === imageSrcArr.length) {
     i = 0;
   }
   $image.setAttribute('src', imageSrcArr[i]);
