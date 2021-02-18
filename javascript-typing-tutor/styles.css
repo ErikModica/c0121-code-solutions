@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  font-family: monospace;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+span {
+  margin: -10px;
+}
+
+.container {
+  padding: 50vh;
+  text-align: center;
+}
+
+.right-letter {
+  color: greenyellow;
+}
+
+.current-letter {
+  border-color: black;
+  border-style: solid;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+}
+
+.wrong-letter {
+  color: red;
+  border-color: red;
+}
