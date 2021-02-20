@@ -3,10 +3,12 @@
 function lastChars(length, string) {
   var newString = '';
 
+  if (string.length < length) {
+    length = string.length;
+  }
+
   for (var i = string.length - length; i < string.length; i++) {
-    if (string[i] !== undefined) {
-      newString += string[i];
-    }
+    newString += string[i];
   }
   return newString;
 }

@@ -3,10 +3,12 @@
 function firstChars(length, string) {
   var newString = '';
 
+  if (string.length < length) {
+    length = string.length;
+  }
+
   for (var i = 0; i < length; i++) {
-    if (string[i] !== undefined) {
-      newString += string[i];
-    }
+    newString += string[i];
   }
   return newString;
 }
