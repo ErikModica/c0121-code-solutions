@@ -9,12 +9,12 @@ Stopwatch.prototype.tick = function () {
 };
 
 Stopwatch.prototype.getTime = function () {
-  var seconds = this.elapsedSeconds;
-  var secondsPerHour = 3600;
-  var hours = Math.floor(seconds / secondsPerHour);
+  let seconds = this.elapsedSeconds;
+  const secondsPerHour = 3600;
+  let hours = Math.floor(seconds / secondsPerHour);
   seconds -= (secondsPerHour * hours);
-  var secondsPerMinute = 60;
-  var minutes = Math.floor(seconds / secondsPerMinute);
+  const secondsPerMinute = 60;
+  let minutes = Math.floor(seconds / secondsPerMinute);
   seconds -= (secondsPerMinute * minutes);
   hours = hours.toString();
   hours = hours.padStart(2, '0');

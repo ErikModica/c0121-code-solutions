@@ -21,7 +21,7 @@ var dot = {
 
 var warnerPrototype = {
   describe: function () {
-    var description = this.name + ' is a ' +
+    const description = this.name + ' is a ' +
       this.age + '-year-old Warner ' + this.role + '.';
     return description;
   }

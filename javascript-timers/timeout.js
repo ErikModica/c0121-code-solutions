@@ -1,4 +1,4 @@
-var $text = document.querySelector('h1');
+const $text = document.querySelector('h1');
 
 function sayHello() {
   $text.textContent = 'Hello There';

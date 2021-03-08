@@ -1,10 +1,10 @@
 /* exported dropRight */
 
 function dropRight(array, count) {
-  var newArray = [];
+  const newArray = [];
   count = array.length - count;
   if (array.length > 0) {
-    for (var i = 0; i < count; i++) {
+    for (let i = 0; i < count; i++) {
       newArray.push(array[i]);
     }
   }

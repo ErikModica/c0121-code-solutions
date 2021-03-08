@@ -1,6 +1,6 @@
-var $typedLetter = document.querySelector('body');
-var $spanText = document.querySelectorAll('span');
-var i = 0;
+const $typedLetter = document.querySelector('body');
+const $spanText = document.querySelectorAll('span');
+let i = 0;
 
 $spanText[0].className = 'current-letter';
 

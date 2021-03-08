@@ -23,8 +23,8 @@ Account.prototype.withdraw = function (amount) {
 };
 
 Account.prototype.getBalance = function () {
-  var balance = 0;
-  for (var i = 0; i < this.transactions.length; i++) {
+  let balance = 0;
+  for (let i = 0; i < this.transactions.length; i++) {
     if (this.transactions[i].type === 'deposit') {
       balance += this.transactions[i].amount;
     } else {

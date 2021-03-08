@@ -23,7 +23,7 @@ var petPrototype = {
     this.sound.play();
   },
   getDescription: function () {
-    var description = this.rating + ' out of 10 ' + this.type;
+    const description = this.rating + ' out of 10 ' + this.type;
     return description;
   }
 };

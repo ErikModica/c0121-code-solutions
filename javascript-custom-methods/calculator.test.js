@@ -59,20 +59,20 @@ describe('calculator', function () {
   describe('calculator.sumAll(numbers)', function () {
 
     it('returns the sum of 2 and 3', function () {
-      var input = [2, 3];
-      var output = calculator.sumAll(input);
+      const input = [2, 3];
+      const output = calculator.sumAll(input);
       expect(output).to.equal(5);
     });
 
     it('returns the sum of 5, 6, and 7', function () {
-      var input = [5, 6, 7];
-      var output = calculator.sumAll(input);
+      const input = [5, 6, 7];
+      const output = calculator.sumAll(input);
       expect(output).to.equal(18);
     });
 
     it('returns the sum of 92, 88, 95, and 101', function () {
-      var input = [92, 88, 95, 101];
-      var output = calculator.sumAll(input);
+      const input = [92, 88, 95, 101];
+      const output = calculator.sumAll(input);
       expect(output).to.equal(376);
     });
 
@@ -81,20 +81,20 @@ describe('calculator', function () {
   describe('calculator.getAverage(numbers)', function () {
 
     it('returns the average of 2 and 3', function () {
-      var input = [2, 3];
-      var output = calculator.getAverage(input);
+      const input = [2, 3];
+      const output = calculator.getAverage(input);
       expect(output).to.equal(2.5);
     });
 
     it('returns the average of 5, 6, and 7', function () {
-      var input = [5, 6, 7];
-      var output = calculator.getAverage(input);
+      const input = [5, 6, 7];
+      const output = calculator.getAverage(input);
       expect(output).to.equal(6);
     });
 
     it('returns the average of 92, 88, 95, and 101', function () {
-      var input = [92, 88, 95, 101];
-      var output = calculator.getAverage(input);
+      const input = [92, 88, 95, 101];
+      const output = calculator.getAverage(input);
       expect(output).to.equal(94);
     });
 

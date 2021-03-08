@@ -1,7 +1,7 @@
-var $text = document.querySelector('h1');
+const $text = document.querySelector('h1');
 
 function countdown() {
-  var num = $text.textContent;
+  let num = $text.textContent;
   num = parseInt(num);
   num--;
   $text.textContent = num;

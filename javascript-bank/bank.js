@@ -7,7 +7,7 @@ function Bank() {
 
 Bank.prototype.openAccount = function (holder, balance) {
   if (balance > 0) {
-    var newAcct = new Account(this.nextAccountNumber, holder);
+    const newAcct = new Account(this.nextAccountNumber, holder);
     newAcct.deposit(balance);
     this.accounts.push(newAcct);
     this.nextAccountNumber++;
@@ -18,7 +18,7 @@ Bank.prototype.openAccount = function (holder, balance) {
 
 Bank.prototype.getAccount = function (number) {
 
-  for (var i = 0; i < this.accounts.length; i++) {
+  for (let i = 0; i < this.accounts.length; i++) {
     if (this.accounts[i].number === number) {
       return this.accounts[i];
     }
@@ -31,9 +31,9 @@ Bank.prototype.getTotalAssets = function () {
     return 0;
   }
 
-  var totalAssets = 0;
+  let totalAssets = 0;
 
-  for (var i = 0; i < this.accounts.length; i++) {
+  for (let i = 0; i < this.accounts.length; i++) {
     totalAssets += this.accounts[i].getBalance();
   }
   return totalAssets;

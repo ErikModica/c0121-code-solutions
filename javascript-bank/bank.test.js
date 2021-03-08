@@ -21,14 +21,14 @@ describe('Bank', function () {
   describe('new Bank()', function () {
 
     it('has a nextAccountNumber property initialized to 1', function () {
-      var bank = new Bank();
+      const bank = new Bank();
       expect(bank)
         .to.have.property('nextAccountNumber')
         .that.equals(1);
     });
 
     it('has an accounts property initialized to an empty array', function () {
-      var bank = new Bank();
+      const bank = new Bank();
       expect(bank)
         .to.have.property('accounts')
         .that.is.an('array')
@@ -42,7 +42,7 @@ describe('Bank', function () {
     context('when the opening balance is not a positive integer', function () {
 
       it('does not create an account and returns null', function () {
-        var bank = new Bank();
+        const bank = new Bank();
         expect(bank.openAccount('Jeff Jefferson', 0)).to.equal(null);
         expect(bank.openAccount('Jeff Jefferson', 'fish')).to.equal(null);
         expect(bank.openAccount('Jeff Jefferson', false)).to.equal(null);
@@ -55,7 +55,7 @@ describe('Bank', function () {
     context('when the opening balance is a positive integer', function () {
 
       it('creates an account and returns the account number', function () {
-        var bank = new Bank();
+        const bank = new Bank();
         expect(bank.openAccount('Jeff Jefferson', 1)).to.equal(1);
         expect(bank.openAccount('Jeff Jefferson Jr', 10)).to.equal(2);
         expect(bank.openAccount('Jeff Jefferson III', 1000)).to.equal(3);
@@ -71,7 +71,7 @@ describe('Bank', function () {
     context('when the bank does not have a matching account', function () {
 
       it('returns null', function () {
-        var bank = new Bank();
+        const bank = new Bank();
         expect(bank.getAccount(39)).to.equal(null);
         expect(bank.getAccount(42)).to.equal(null);
       });
@@ -81,13 +81,13 @@ describe('Bank', function () {
     context('when the bank has a matching account', function () {
 
       it('returns the account', function () {
-        var bank = new Bank();
-        var one = bank.openAccount('Jeff Jefferson', 10);
-        var two = bank.openAccount('Jeff Jefferson Jr', 100);
-        var three = bank.openAccount('Jeff Jefferson III', 1000);
-        var third = bank.getAccount(three);
-        var first = bank.getAccount(one);
-        var second = bank.getAccount(two);
+        const bank = new Bank();
+        const one = bank.openAccount('Jeff Jefferson', 10);
+        const two = bank.openAccount('Jeff Jefferson Jr', 100);
+        const three = bank.openAccount('Jeff Jefferson III', 1000);
+        const third = bank.getAccount(three);
+        const first = bank.getAccount(one);
+        const second = bank.getAccount(two);
         expect(third)
           .to.have.property('holder')
           .that.equals('Jeff Jefferson III');
@@ -111,7 +111,7 @@ describe('Bank', function () {
     context('when the bank has no accounts', function () {
 
       it('returns 0', function () {
-        var bank = new Bank();
+        const bank = new Bank();
         expect(bank.getTotalAssets()).to.equal(0);
       });
 
@@ -120,13 +120,13 @@ describe('Bank', function () {
     context('when the bank has accounts', function () {
 
       it('returns the total of all account balances', function () {
-        var bank = new Bank();
-        var one = bank.openAccount('Jeff Jefferson', 10);
-        var two = bank.openAccount('Jeff Jefferson Jr', 100);
-        var three = bank.openAccount('Jeff Jefferson III', 1000);
-        var first = bank.getAccount(one);
-        var second = bank.getAccount(two);
-        var third = bank.getAccount(three);
+        const bank = new Bank();
+        const one = bank.openAccount('Jeff Jefferson', 10);
+        const two = bank.openAccount('Jeff Jefferson Jr', 100);
+        const three = bank.openAccount('Jeff Jefferson III', 1000);
+        const first = bank.getAccount(one);
+        const second = bank.getAccount(two);
+        const third = bank.getAccount(three);
         first.deposit(5);
         second.deposit(15);
         second.withdraw(32);

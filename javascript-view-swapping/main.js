@@ -1,6 +1,6 @@
-var $tabContainer = document.querySelector('.tab-container');
-var $tabClassNodeList = document.querySelectorAll('.tab');
-var $viewClassNodeList = document.querySelectorAll('.view');
+const $tabContainer = document.querySelector('.tab-container');
+const $tabClassNodeList = document.querySelectorAll('.tab');
+const $viewClassNodeList = document.querySelectorAll('.view');
 
 $tabContainer.addEventListener('click', function (event) {
 
@@ -14,7 +14,7 @@ $tabContainer.addEventListener('click', function (event) {
       }
     }
 
-    var dataViewValue = event.target.getAttribute('data-view');
+    const dataViewValue = event.target.getAttribute('data-view');
 
     for (i = 0; i < $viewClassNodeList.length; i++) {
       if ($viewClassNodeList[i].getAttribute('data-view') === dataViewValue) {

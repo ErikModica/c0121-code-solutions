@@ -9,7 +9,7 @@ describe('Student', function () {
   describe('new Student(firstName, lastName, subject)', function () {
 
     it('has firstName, lastName, and subject properties', function () {
-      var grace = new Student('Grace', 'Hopper', 'compilers');
+      const grace = new Student('Grace', 'Hopper', 'compilers');
       expect(grace)
         .to.have.own.property('firstName')
         .that.equals('Grace');
@@ -22,7 +22,7 @@ describe('Student', function () {
     });
 
     it('has getFullName() and getIntroduction() prototype methods', function () {
-      var ron = new Student('Ron', 'Jeffries', 'extreme programming');
+      const ron = new Student('Ron', 'Jeffries', 'extreme programming');
       expect(ron).not.to.have.own.property('getFullName');
       expect(ron).to.respondTo('getFullName');
       expect(ron).not.to.have.own.property('getIntroduction');
@@ -32,8 +32,8 @@ describe('Student', function () {
     describe('student.getFullName()', function () {
 
       it('returns the full name of the student', function () {
-        var edsger = new Student('Edsgar', 'Dijkstra', 'computer science');
-        var fullName = edsger.getFullName();
+        const edsger = new Student('Edsgar', 'Dijkstra', 'computer science');
+        const fullName = edsger.getFullName();
         expect(fullName).to.equal('Edsgar Dijkstra');
       });
 
@@ -42,8 +42,8 @@ describe('Student', function () {
     describe('student.getIntroduction()', function () {
 
       it('returns an introduction for the student', function () {
-        var grady = new Student('Grady', 'Booch', 'software engineering');
-        var introduction = grady.getIntroduction();
+        const grady = new Student('Grady', 'Booch', 'software engineering');
+        const introduction = grady.getIntroduction();
         expect(introduction).to.equal(
           'Hello, my name is Grady Booch and I am studying software engineering.'
         );

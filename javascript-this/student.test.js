@@ -45,17 +45,17 @@ describe('student', function () {
     });
 
     it('returns the student\'s full name', function () {
-      var fullName = student.getFullName();
+      const fullName = student.getFullName();
       expect(fullName).to.be.a('string');
     });
 
     it('uses the firstName and lastName properties of `this`', function () {
-      var jeff = {
+      const jeff = {
         firstName: 'Jeff',
         lastName: 'Jefferson'
       };
       jeff.getFullName = student.getFullName;
-      var fullName = jeff.getFullName();
+      const fullName = jeff.getFullName();
       expect(fullName).to.equal('Jeff Jefferson');
     });
 
@@ -70,12 +70,12 @@ describe('student', function () {
     });
 
     it('returns the student\'s introduction', function () {
-      var introduction = student.getIntroduction();
+      const introduction = student.getIntroduction();
       expect(introduction).to.be.a('string');
     });
 
     it('uses the firstName, lastName, and subject properties of `this`', function () {
-      var doug = {
+      const doug = {
         firstName: 'Douglas',
         lastName: 'Crockford',
         subject: 'JavaScript',
@@ -84,8 +84,8 @@ describe('student', function () {
         }
       };
       doug.getIntroduction = student.getIntroduction;
-      var actual = doug.getIntroduction();
-      var expected = 'Hello, my name is Douglas Crockford and I am studying JavaScript.';
+      const actual = doug.getIntroduction();
+      const expected = 'Hello, my name is Douglas Crockford and I am studying JavaScript.';
       expect(actual).to.equal(expected);
     });
 

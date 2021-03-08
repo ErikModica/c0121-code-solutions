@@ -2,10 +2,10 @@
 
 function chunk(array, size) {
 
-  var returnAr = [];
-  var sizeAr = [];
+  const returnAr = [];
+  let sizeAr = [];
 
-  for (var i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
 
     sizeAr.push(array[i]);
 

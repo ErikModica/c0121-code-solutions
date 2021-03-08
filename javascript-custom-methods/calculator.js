@@ -17,15 +17,15 @@ var calculator = {
     return x * x;
   },
   sumAll: function (numbers) {
-    var sum = 0;
-    for (var i = 0; i < numbers.length; i++) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
       sum = sum + numbers[i];
     }
     return sum;
   },
   getAverage: function (numbers) {
-    var sum = 0;
-    for (var i = 0; i < numbers.length; i++) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
       sum = sum + numbers[i];
     }
     return sum / numbers.length;

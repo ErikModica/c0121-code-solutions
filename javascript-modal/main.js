@@ -1,7 +1,7 @@
-var $openButton = document.querySelector('.open-button');
-var $modalDialog = document.querySelector('.modal-dialog');
-var $container = document.querySelector('.container');
-var $noButton = document.querySelector('.no-button');
+const $openButton = document.querySelector('.open-button');
+const $modalDialog = document.querySelector('.modal-dialog');
+const $container = document.querySelector('.container');
+const $noButton = document.querySelector('.no-button');
 
 $openButton.addEventListener('click', function (event) {
   $modalDialog.className = 'modal-dialog';

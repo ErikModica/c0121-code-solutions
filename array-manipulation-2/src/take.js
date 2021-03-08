@@ -1,9 +1,9 @@
 /* exported take */
 
 function take(array, count) {
-  var newArray = [];
+  const newArray = [];
   if (array.length > 0) {
-    for (var i = 0; i < count; i++) {
+    for (let i = 0; i < count; i++) {
       newArray.push(array[i]);
     }
   }
