@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.bumper-column {
+  width: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5rem;
+}
+
+.bumper-column > i {
+  font-size: 40px;
+}
+
+.img-column {
+  width: 25%;
+}
+
+.img-column > img {
+  width: 100%;
+}
+
+.cycle-column {
+  margin-top: 1rem;
+}
+
+.cycle-column > i {
+  padding: 0 0.2rem;
+}
+
+.bumper-column > i:hover {
+  font-size: 50px;
+  color: red;
+  cursor: pointer;
+}
+
+.cycle-column > i:hover {
+  font-size: 20px;
+  color: red;
+  cursor: pointer;
+}
