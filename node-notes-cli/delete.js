@@ -1,7 +1,7 @@
 const noteBook = require('./data.json');
 const fs = require('fs');
 
-if (process.argv[2] === 'delete' && typeof parseInt(process.argv[3]) === 'number') {
+if (process.argv[2] === 'delete') {
   delete noteBook.notes[process.argv[3]];
 
   const noteBookJSON = JSON.stringify(noteBook, null, 2);

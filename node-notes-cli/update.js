@@ -1,7 +1,7 @@
 const noteBook = require('./data.json');
 const fs = require('fs');
 
-if (process.argv[2] === 'update' && typeof parseInt(process.argv[3]) === 'number') {
+if (process.argv[2] === 'update') {
   noteBook.notes[process.argv[3]] = process.argv[4];
 
   const noteBookJSON = JSON.stringify(noteBook, null, 2);
