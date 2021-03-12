@@ -2,9 +2,11 @@
 
 function titleCase(title) {
 
-  var i = 0;
-  var singleWord = '';
-  var fullString = '';
+  let i = 0;
+  let singleWord = '';
+  let fullString = '';
+  const smallWordsNoCaps = [' of', ' a', ' the', ' and', ' an', ' or', ' nor', ' but', ' is', ' if', ' then', ' else', ' when',
+    ' at', ' from', ' by', ' on', ' off', ' for', ' in', ' out', ' over', ' to', ' into', ' with'];
 
   title = title.toLowerCase();
   title += ' ';
@@ -13,7 +15,7 @@ function titleCase(title) {
 
     while (title[i] !== ' ') {
 
-      if (i === 0 || title[i - 1] === ' ' || singleWord === 'Java' || singleWord === ' Java' || title[i - 1] === '-') {
+      if (i === 0 || title[i - 1] === ' ' || title[i - 1] === '-') {
         singleWord += title[i].toUpperCase();
       } else {
         singleWord += title[i];
@@ -21,12 +23,22 @@ function titleCase(title) {
       i++;
     }
 
-    if (singleWord.length <= 4 && i - singleWord.length !== 0 && title[i - (singleWord.length + 1)] !== ':' && singleWord !== ' Web') {
+    if (singleWord === ' Javascript') {
+      singleWord = ' JavaScript';
+    } else if (singleWord === ' Javascript:') {
+      singleWord = ' JavaScript:';
+    } else if (singleWord === 'Javascript:') {
+      singleWord = 'JavaScript:';
+    } else if (singleWord === 'Javascript') {
+      singleWord = 'JavaScript';
+    }
+
+    if (smallWordsNoCaps.includes(singleWord.toLowerCase()) && title[i - (singleWord.length + 1)] !== ':') {
       singleWord = singleWord.toLowerCase();
     }
 
-    if (singleWord === ' api') {
-      singleWord = singleWord.toUpperCase();
+    if (singleWord === ' Api') {
+      singleWord = ' API';
     }
 
     fullString += singleWord;
