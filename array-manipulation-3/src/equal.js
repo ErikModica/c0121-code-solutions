@@ -1,16 +1,15 @@
 /* exported equal */
 
 function equal(first, second) {
-  var combinedLength = Math.round(first.length + second.length / 2);
-  var isEqual;
-  var i = 0;
 
-  while (first[i] === second[i] && i < combinedLength) {
-    isEqual = true;
-    i++;
+  if (first.length !== second.length) {
+    return false;
   }
-  if (i < combinedLength) {
-    isEqual = false;
+
+  for (let i = 0; i < first.length; i++) {
+    if (first[i] !== second[i]) {
+      return false;
+    }
   }
-  return isEqual;
+  return true;
 }
