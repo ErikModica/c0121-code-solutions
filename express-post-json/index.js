@@ -9,7 +9,7 @@ app.get('/api/grades', (req, res) => {
   for (const key in grades) {
     gradesArray.push(grades[key]);
   }
-  if (!grades) {
+  if (!gradesArray.length === 0) {
     res.status(404).send('No grades :(');
   } else {
     res.status(200).json(gradesArray);
@@ -22,8 +22,8 @@ app.post('/api/grades', (req, res) => {
   grades[nextID] = req.body;
   grades[nextID].id = nextID;
   grades[nextID].score = parseInt(grades[nextID].score, 10);
+  res.status(201).send(grades[nextID]);
   nextID++;
-  res.status(201).send(grades);
 });
 
 app.listen(3000, () => {
