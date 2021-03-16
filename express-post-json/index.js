@@ -9,11 +9,7 @@ app.get('/api/grades', (req, res) => {
   for (const key in grades) {
     gradesArray.push(grades[key]);
   }
-  if (!gradesArray.length === 0) {
-    res.status(404).send('No grades :(');
-  } else {
-    res.status(200).json(gradesArray);
-  }
+  res.status(200).json(gradesArray);
 });
 
 app.use(express.json());
