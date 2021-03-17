@@ -19,8 +19,6 @@ app.get('/api/notes/:id', (req, res) => {
     res.json(data.notes[req.params.id]);
   } else if (data.notes[req.params.id] === undefined) {
     res.status(404).json({ error: `cannot find note with id ${req.params.id}` });
-  } else {
-    console.error('Big unknown error has occured');
   }
 
 });
@@ -39,7 +37,7 @@ app.post('/api/notes', (req, res) => {
     fs.writeFile('./data.json', dataJSON, 'utf8', err => {
       if (err) {
         res.status(500).json({ error: 'an unexpected error occured' });
-        process.exit(1);
+        console.error(err);
       } else {
         res.status(201).json(req.body);
       }
@@ -59,7 +57,7 @@ app.delete('/api/notes/:id', (req, res) => {
     fs.writeFile('./data.json', dataJSON, 'utf8', err => {
       if (err) {
         res.status(500).json({ error: 'an unexpected error occured' });
-        process.exit(1);
+        console.error(err);
       } else {
         res.status(204).send();
       }
@@ -80,7 +78,7 @@ app.put('/api/notes/:id', (req, res) => {
     fs.writeFile('./data.json', dataJSON, 'utf8', err => {
       if (err) {
         res.status(500).json({ error: 'an unexpected error occured' });
-        process.exit(1);
+        console.error(err);
       } else {
         res.status(200).json(data.notes[req.params.id]);
       }
