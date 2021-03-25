@@ -1,11 +1,7 @@
-/* eslint-disable no-useless-constructor */
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 class CustomButton extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return <button>{this.props.text}</button>;
