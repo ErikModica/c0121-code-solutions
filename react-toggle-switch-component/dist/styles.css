@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+.switch-container {
+  display: flex;
+}
+
+.switch {
+  position: relative;
+  width: 65px;
+  height: 34px;
+  border: 2px solid gray;
+  border-radius: 20px;
+}
+
+.slider {
+  background-color: rgb(189, 189, 189);
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  position: absolute;
+}
+
+.status {
+  font-weight: bold;
+  font-size: 30px;
+  padding-left: 2rem;
+}
+
+.on-switch {
+  background-color: limegreen;
+}
+
+.on-slider {
+  right: 0;
+}
+
+.off-container {
+  margin-top: 10rem;
+}
