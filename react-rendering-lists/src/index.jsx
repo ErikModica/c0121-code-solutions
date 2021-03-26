@@ -2,10 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 class RenderMon extends React.Component {
-  constructor(props) {
-    super(props);
-    this.pokedex = props.pokedex;
-  }
 
   render() {
     const listItems = this.props.pokedex.map(pokemon => <li key={pokemon.number}>{pokemon.name}</li>);
