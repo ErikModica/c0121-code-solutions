@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Tahoma, sans-serif;
+}
+
+h1,
+h2,
+i {
+  padding-left: 1rem;
+}
+
+i {
+  padding-top: 1rem;
+  font-size: 32px;
+}
+
+.page {
+  display: flex;
+  height: 100vh;
+}
+
+.background {
+  background-color: rgba(1, 1, 1, 0.63);
+  width: 80%;
+}
+
+.menu-container {
+  background-color: rgb(221, 221, 221);
+  width: 20%;
+}
