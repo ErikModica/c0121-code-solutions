@@ -5,7 +5,9 @@ class Carousel extends React.Component {
   constructor(props) {
     super(props);
     this.state = ({ currentIndex: 0 });
-    this.renderBalls = this.renderBalls.bind(this);
+  }
+
+  componentDidMount() {
     this.changeImage = this.changeImage.bind(this);
     this.chevronClick = this.chevronClick.bind(this);
     this.goToBall = this.goToBall.bind(this);
@@ -48,10 +50,11 @@ class Carousel extends React.Component {
   }
 
   renderBalls() {
-    const ballList = [];
-    for (let i = 0; i < this.props.images.length; i++) {
-      ballList.push(<i onClick={this.goToBall} id={i} key={i} className={this.state.currentIndex === i ? 'ball fas fa-circle' : 'ball far fa-circle'} ></i>);
-    }
+    const ballList = this.props.images.map((image, i) => {
+      return (
+      <i onClick={this.goToBall} id={i} key={i} className={this.state.currentIndex === i ? 'ball fas fa-circle' : 'ball far fa-circle'} ></i>
+      );
+    });
     return ballList;
   }
 
