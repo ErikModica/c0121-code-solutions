@@ -1,0 +1,55 @@
+USER CAN SIGN UP
+  User is prompted with a basic login screen that shows
+  an input for a username and a password.  They are also
+  shown two buttons at the bottom, a regiser button, and a
+  log in button.  If the user decides to click the register button
+  the input boxes stay the same, but the buttons switch to regiser mode.
+  Now that the user is in register mode, the handleChange method listens
+  for changes in the input box.  Each input the handleChange method sets the
+  state of the username or password property in the input box.
+  once the user is finished typing in their account information, the
+  handleSubmit method is fired and sends a POST request to the
+  /api/auth/sign-up middleware.  If their are both a username and password
+  in the request body, then the password is hashed and both the username and
+  the hashed password are inserted into a sql statement and and queried into
+  the database, if not a 400 error is thrown.  once the insert statement is
+  queried successfully, a 201 status is sent returning their userId, username,
+  and the time created at.
+
+USER CAN SIGN IN
+  The user is prompted with a login screen at start. Once they have
+  typed in and submitted both the username and password,  a POST request
+  is sent to the /api/auth/sign-in middleware.  the middleware checks
+  if there is both a username and password input, if not it throws a
+  401 error.  It then continues to insert the username into a sql statement
+  that will be used to select the userId and hashedPassword based off of
+  the username input. the database gets queried and if there is a result,
+  the hashed password from the database is compared to the password input by
+  the user.  If the verification is not matching a 401 error is thrown, else,
+  a token is created and assigned to the user payload.  the flow then runs back
+  to the original fetch statemnt and if the result of the above has both a
+  user property and a token property, then the handleSignIn method is executed.
+  this method saves the token property of the result object to local storage and
+  sets the state.user to the user profile that was just signed in.
+
+USER CAN STAY SIGNED IN
+  Once the user has signed in with a valid username and password, the
+  token they recieved is saved to local storage. Now whenever the webpage
+  is reloaded, thanks to the componentDidMount method of the App component,
+  it retrieves the token from local storage, then if there is one,
+  it will decode the token and set the return of the decode to the user, if
+  there is no token it will set the value of user to null.  after that it
+  will set state.user to the value above, then set isAuthorizing to false.
+  this will trigger a rerender, and if the isAuthorizing property is true,
+  the render method of the App component will return null, else is will
+  continue to render the page. this page render will execute this.renderPage
+  method and based on the path route will direct the user to home,
+  the authorization page, or give em a good ole 404 page.
+
+USER CAN SIGN OUT
+  Once the user is signed in successfully they have the option of
+  clicking a sign out button at the top right of the page. if clicked,
+  the handleSignOut method will be executed and it would remove the
+  user token from local storage.  This method also sets the user state
+  to null triggering a rerender which, because they are not signed in,
+  would send them to an authorization screen.
